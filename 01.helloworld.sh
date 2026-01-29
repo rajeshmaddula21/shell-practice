@@ -1,3 +1,4 @@
 #!/bin/bash
 
-ech "hello world"
+echo "hello world"
+echo "Hi, I am learning GIT"
