@@ -7,3 +7,7 @@ SUM=$(($NUM1+$NUM2))
 
 echo "Sum is: $SUM"
 
+FRUITS=("Apple" "Banana" "Pomo")
+
+echo "Fruits are: ${FRUITS(@)}"
+  
