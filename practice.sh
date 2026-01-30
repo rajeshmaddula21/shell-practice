@@ -21,7 +21,7 @@ echo "Nginx installation ..SUCCESS"
 fi
 
 
-dnf install mysqll -y
+dnf install mysql -y
 
 if [ $? -ne 0 ]; then
 echo "mysql installation ..FAILUE"
@@ -31,7 +31,7 @@ echo "mysql installation ..SUCCESS"
 
 fi
 
-dnf install nodejss -y
+dnf install nodejs -y
 
 if [ $? -ne 0 ]; then
 echo "nodejs installation ..FAILUE"
