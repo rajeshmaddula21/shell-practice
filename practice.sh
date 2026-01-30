@@ -2,7 +2,7 @@
 
 UDERSID=$(id -u)
 
-if [ $USERID -ne 0]; then
+if [ $USERID -ne 0 ]; then
 
 echo "Please run the script with the root user"
 
