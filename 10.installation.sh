@@ -9,4 +9,4 @@ echo " Please use Sudo access "
 exit 1
 else
 echo "intalling nginx"
-
+fi
