@@ -1,7 +1,7 @@
-#!bin/bash
+#!/bin/bash
 
-LOGS_FOLDER="var/log/shell-practice"
-LOGs_FILE="/var/log/shell-practice/$0.log"
+LOGS_FOLDER="/var/log/shell-practice"
+LOGS_FILE="/var/log/shell-practice/$0.log"
 
 
 USERID=$(id -u)
@@ -17,7 +17,7 @@ mkdir -p $LOGS_FOLDER
 
 VALIDATE(){
     if [ $1 -ne 0 ]; then
-    echo "$2 ..FAILUR"
+    echo "$2 ..FAILURE"
     exit 1
 
     else
