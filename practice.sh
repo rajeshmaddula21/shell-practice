@@ -21,3 +21,22 @@ echo "Nginx installation ..SUCCESS"
 fi
 
 
+dnf install mysqll -y
+
+if [ $? -ne 0 ]; then
+echo "mysql installation ..FAILUE"
+
+else
+echo "mysql installation ..SUCCESS"
+
+fi
+
+dnf install nodejss -y
+
+if [ $? -ne 0 ]; then
+echo "nodejs installation ..FAILUE"
+
+else
+echo "nodejs installation ..SUCCESS"
+
+fi
