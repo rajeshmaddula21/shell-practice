@@ -9,4 +9,5 @@ echo "Please run the script with the root user"
 dnf install nginx -y
 echo "Installing Ngix"
 
+fi
 
