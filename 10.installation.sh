@@ -1,3 +1,3 @@
 #!/bin/bash
-
-dnf install nginx -y
+instance=$1
+dnf install $instance -y
