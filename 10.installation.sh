@@ -1,12 +1,10 @@
 #!/bin/bash
 
-dnf install nginx -y
+USERID=$(id -u)
 
-validate=$(id -u)
-
-if ( $validate -ne 0 ) ; then
-echo " Please use Sudo access "
-exit 1
-else
-echo "intalling nginx"
+if [ $USERID -ne 0 ] ; then
+    echo "Please run this script with root access"
 fi
+
+echo "Installing Nginx"
+dnf install nginx -y
