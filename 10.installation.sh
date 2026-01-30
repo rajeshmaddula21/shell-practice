@@ -8,11 +8,29 @@ if [ $USERID -ne 0 ] ; then
 fi
 
 echo "Installing Nginx"
-dnf install nginxx -y
+dnf install nginx -y
 
 if [ $? -ne 0 ]; then
     echo "Installing Nginx ...Failur"
     exit 1
 else 
     echo "Installing  Nginx ...Success"
+fi
+
+dnf install mysql -y
+
+if [ $? -ne 0 ]; then
+    echo "Installing mysql ...Failur"
+    exit 1
+else 
+    echo "Installing  mysql ...Success"
+fi
+
+dnf install nodejs -y
+
+if [ $? -ne 0 ]; then
+    echo "Installing nodejs ...Failur"
+    exit 1
+else 
+    echo "Installing  nodejs ...Success"
 fi
