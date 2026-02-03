@@ -11,15 +11,15 @@ fi
 
 VALIDATE() {
     if [ $1 -ne 0];then
-echo "Intalling Nginx ..Failur"
+echo "$2 ..Failur"
 exit 1
 else
-echo "Installing Nginx ..Success"
+echo "$2 ..Success"
 
 fi
 }
-dnf install mongodb -y
-VALIDATE $1 
+dnf install Nginx -y
+VALIDATE $? "Installing Nginx" 
 
 
 
