@@ -1,7 +1,9 @@
 #!bin/bash
 
-USERID=$(id -u)
+LOGS_FOLDER="/var/log/shell-practice"
+LOGS_FILE="/var/log/shell-practice/$0.log"
 
+USERID=$(id -u)
 
 if [ $USERID -ne 0 ]; then
 echo "Please run the script with Root User"
@@ -18,7 +20,7 @@ echo "$2 ..Success"
 
 fi
 }
-dnf install nginx -y
+dnf install nginx -y &>> $LOGS_FILE
 VALIDATE $? "Installing Nginx" 
 
 
