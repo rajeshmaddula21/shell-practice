@@ -2,41 +2,18 @@
 
 USERID=$(id -u)
 
-if [ $USERID -ne 0 ]; then
-
-echo "Please run the script with the root user"
+if [ USERID -eq 0]; then
+echo "Please run the script with Root User"
 exit 1
 
 fi
 
-dnf install nginx -y
 echo "Installing Nginx"
+dnf install mongodb -y
 
-if [ $? -ne 0 ]; then
-echo "Nginx installation ..FAILUE"
-
+if [ $? -ne 0];then
+echo "Intalling Nginx ..Failur"
+exit 1
 else
-echo "Nginx installation ..SUCCESS"
+echo "Installing Nginx ..Success"
 
-fi
-
-
-dnf install mysql -y
-
-if [ $? -ne 0 ]; then
-echo "mysql installation ..FAILUE"
-
-else
-echo "mysql installation ..SUCCESS"
-
-fi
-
-dnf install nodejs -y
-
-if [ $? -ne 0 ]; then
-echo "nodejs installation ..FAILUE"
-
-else
-echo "nodejs installation ..SUCCESS"
-
-fi
