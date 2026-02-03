@@ -2,7 +2,7 @@
 
 USERID=$(id -u)
 
-if [ USERID -eq 0]; then
+if [ $USERID -eq 0]; then
 echo "Please run the script with Root User"
 exit 1
 
@@ -17,3 +17,4 @@ exit 1
 else
 echo "Installing Nginx ..Success"
 
+fi
