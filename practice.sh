@@ -9,7 +9,7 @@ exit 1
 
 fi
 echo "installing nginx"
-dnf install nginxxx -y
+dnf install nginxxx -y &>> output.log
 if [ $? -ne 0 ];then
 echo "niginx installation .. Failure"
 else
