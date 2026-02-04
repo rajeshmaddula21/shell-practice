@@ -1,27 +1,18 @@
-#!bin/bash
-
-LOGS_FOLDER="/var/log/shell-practice"
-LOGS_FILE="/var/log/shell-practice/$0.log"
+!#/bin/bash
 
 USERID=$(id -u)
 
+
 if [ $USERID -ne 0 ]; then
-echo "Please run the script with Root User"
+echo "Please run the script with the root access"
 exit 1
 
 fi
-
-VALIDATE() {
-    if [ $1 -ne 0 ];then
-echo "$2 ..Failur"
-exit 1
+echo "installing nginx"
+dnf install nginx -y
+if [ $? -ne 0 ];then
+echo "niginx installation .. Failure"
 else
-echo "$2 ..Success"
+echo "nginx installation .. Success"
 
 fi
-}
-dnf install nginx -y &>> $LOGS_FILE
-VALIDATE $? "Installing Nginx" 
-
-
-
