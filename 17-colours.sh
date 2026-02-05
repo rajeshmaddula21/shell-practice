@@ -12,7 +12,7 @@ USERID=$(id -u)
 
 if [ $USERID -ne 0 ]; then
 
-echo -e " $R Please run the script with Root User $N "
+echo -e "$R Please run the script with Root User $N"
 exit 1
 
 fi
